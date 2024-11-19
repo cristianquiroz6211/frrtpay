@@ -23,6 +23,7 @@ const RegisterLocation = () => {
   const fetchData = async () => {
     try {
       const token = await getAccessTokenSilently();
+      console.log("Token de Auth0:", token);
       
       // Obtener el UUID de la sede
       const sedeResponse = await axios.get("https://localhost:8080/general/api/v1/sede", {
@@ -77,6 +78,7 @@ const RegisterLocation = () => {
     try {
       setLoading(true);
       const token = await getAccessTokenSilently();
+      console.log("Token de Auth0:", token);
       
       const response = await axios.post('http://localhost:8080/general/api/v1/usuarios/ubicacion', formData, {
         headers: {
