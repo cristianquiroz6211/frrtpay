@@ -80,7 +80,7 @@ const RegisterLocation = () => {
       const token = await getAccessTokenSilently();
       console.log("Token de Auth0:", token);
       
-      const response = await axios.post('http://localhost:8080/general/api/v1/usuarios/ubicacion', formData, {
+      const response = await axios.post('https://localhost:8080/general/api/v1/usuarios/ubicacion', formData, {
         headers: {
           Authorization: `Bearer ${token}`,
           'Content-Type': 'application/json'
